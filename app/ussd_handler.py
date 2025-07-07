@@ -1,3 +1,6 @@
+from fastapi import Request
+from fastapi.responses import PlainTextResponse
+
 def handle_ussd(session_id, phone_number, text):
     # Split the input text by "*" to understand menu progression
     user_response = text.split("*")
