@@ -2,7 +2,7 @@ from fastapi import Request
 from typing import Dict
 from fastapi.responses import PlainTextResponse
 
-def handle_ussd_request(form_data: dict) -> PlainTextResponse:
+def handle_ussd(form_data: dict) -> PlainTextResponse:
     session_id = form_data.get("sessionId", "")
     service_code = form_data.get("serviceCode", "")
     phone_number = form_data.get("phoneNumber", "")
